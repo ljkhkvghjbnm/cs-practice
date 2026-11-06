@@ -28,7 +28,7 @@ def parse_record(line: str) -> Dict[str, any]:
     
     return {
         "city": city.strip(),
-        "temp": temp,
+        "temperature": temp,
         "date": date.strip()
     }
 
@@ -68,7 +68,7 @@ def average_by_city(records: List[Dict[str, any]]) -> Dict[str, float]:
     
     for r in records:
         city = r["city"]
-        temp = r["temp"]
+        temp = r["temperature"]
         
         total[city] = total.get(city, 0.0) + temp
         count[city] = count.get(city, 0) + 1
